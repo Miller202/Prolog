@@ -82,7 +82,8 @@ paralelogramo(C, D):-   C1 is C - 1 + 1,
                         coluna(D1).
 
 janela(0, _, _).
-janela(L, C, J):- C1 is (C - J)//2, coluna1(C1), espaco(J), coluna(C1), L1 is L - 1, janela(L1, C, J). 
+janela(L, C, J):- C1 is (C - J)//2, 
+                coluna1(C1), espaco(J), 
+                coluna(C1), L1 is L - 1, janela(L1, C, J). 
 
 ?-triangulo5(6, 6), janela(4, 12, 6).
-
